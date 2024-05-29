@@ -73,7 +73,7 @@ function OrderDetails() {
                     })}
                     <div className="otherinfo mt-4">Order Information</div>
                     <p className='otherdetails mt-2'>Shipping Address: <span className='text-dark ms-2'>{order.shippingAddress}</span></p>
-                    <p className='otherdetails mt-2'>Payment Method: <span className='text-dark ms-2'>{order.card16digit}</span></p>
+                    <p className='otherdetails mt-2'>Phone<span className='text-dark ms-2'>{order.card16digit}</span></p>
                     <p className='otherdetails mt-2'>Total Amount: <span className='text-dark ms-2 totalamount'>{order.totalammount} $</span></p>
                 </div>
             ) : (null)}
