@@ -65,7 +65,7 @@ function MyOrders() {
                                     </p>
                                     <p>Total Amount: 
                                         <span className='text-dark ms-2'>
-                                            {order.totalammount}$
+                                            {order.totalammount}₼
                                         </span>
                                     </p>
                                 </div>

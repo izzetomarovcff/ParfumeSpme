@@ -75,7 +75,7 @@ function CollectionProduct() {
                                 </div>
                                 <p className='mb-1 mt-1 ms-2'>{product.brandName}</p>
                                 <h6 className='ms-2'>{product.productName}</h6>
-                                <div className='d-flex ms-2'>{product.isSale ? (<del className='me-2' >{product.oldPrice} $</del>) : (null)}<p className='text-primary newprice'>{product.price} $</p></div>
+                                <div className='d-flex ms-2'>{product.isSale ? (<del className='me-2' >{product.oldPrice} ₼</del>) : (null)}<p className='text-primary newprice'>{product.price} ₼</p></div>
                                 {GeneralResponse.favorites.find(item=>item.id == product.id) ? (<div className='addfav shadow-sm bg-primary' onClick={()=>addFav(product)}><img src="../../../image/home/sale/heart.svg" alt="" /></div>):(<div className='addfav shadow-sm' onClick={()=>addFav(product)}><img src="../../../image/home/sale/heart.svg" alt="" /></div>)}
                                 
                             </div>
