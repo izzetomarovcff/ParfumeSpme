@@ -50,9 +50,9 @@ function NewProducts() {
                 </div>
                 <p className='mb-1 mt-1'>{product.brandName}</p>
                 <h6>{product.productName}</h6>
-                <div className='d-flex'>{product.isSale ? (<del className='me-2' >{product.oldPrice} azn
+                <div className='d-flex'>{product.isSale ? (<del className='me-2' >{product.oldPrice} ₼
                 
-                </del>) : (null)}<p className='text-dark newprice'>{product.price} azn</p></div>
+                </del>) : (null)}<p className='text-dark newprice'>{product.price} ₼</p></div>
                 {GeneralResponse.favorites.find(item => item.id == product.id) ? (<div className='addfav shadow-sm bg-primary' onClick={() => addFav(product)}><img src="image/home/sale/heart.svg" alt="" /></div>):(<div className='addfav shadow-sm' onClick={() => addFav(product)}><img src="image/home/sale/heart.svg" alt="" /></div>)}
                 
               </div>
