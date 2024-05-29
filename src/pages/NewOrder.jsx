@@ -110,11 +110,11 @@ function NewOrder() {
                 <div className="success bg-secondary">
                     <div className="imgandtext">
                         <img src="/image/bags.svg" alt="" />
-                        <h1 className='mt-3'>Success!</h1>
-                        <p className='text-center w-75 mt-2'>Your order will be delivered soon. Thank you for choosing our app!</p>
+                        <h1 className='mt-3'>Təsdiqləndi!</h1>
+                        <p className='text-center w-75 mt-2'>Tezliklə Sizinlə Əlaqə Saxlanılacaq !</p>
                     </div>
                     <div className='button'>
-                        <Link to="/shop/women" className='btn btn-primary w-100'>CONTINUE</Link>
+                        <Link to="/shop/women" className='btn btn-primary w-100'>Geri Qayıt</Link>
                     </div>
                     
                 </div>
@@ -130,27 +130,27 @@ function NewOrder() {
             {resError ? (<div className='alert alert-danger'>{resError}</div>) : (null)}
             <div className='header bg-secondary'>
                 <div className='backicon' onClick={() => { window.history.back() }}><img src="/icons/back.svg" alt="" /></div>
-                Order Info
+                Sifariş Məlumatı
                 <div className='right'></div>
             </div>
             <form onSubmit={handleSubmit} className='submitorder'>
                 <div className="mb-3 w-100">
-                    <label htmlFor="shippingAddress" className="form-label">Shipping Address</label>
+                    <label htmlFor="shippingAddress" className="form-label">Ünvan</label>
                     <input type="text" name='shippingAddress' className="form-control" id="shippingAddress" value={order.shippingAddress} onChange={handleChange} autoComplete='off' required placeholder='Baku AZ, Xatai, Polad Hashimov' />
                 </div>
                 <div className="mb-3 w-100">
-                    <label htmlFor="card16digit" className="form-label">Phone</label>
-                    <input type="number" name='card16digit' className="form-control" id="card16digit" value={order.card16digit} onChange={handleChange} autoComplete='off' required placeholder='0709876543'/>
+                    <label htmlFor="card16digit" className="form-label">Əlaqə Nömrəsi</label>
+                    <input type="number" name='card16digit' className="form-control" id="card16digit" value={order.card16digit} onChange={handleChange} autoComplete='off' required placeholder='+994707007070'/>
                 </div>
                 <div className='order'>
-                    <p className='text'>Order</p>
+                    <p className='text'>Sifariş</p>
                     <p className='price'>{summary}$</p>
                 </div>
                 <div className='summary mt-2'>
-                    <p className='text'>Summary</p>
+                    <p className='text'>Ümumi</p>
                     <p className='price'>{summary}$</p>
                 </div>
-                <button type='submit' className='btn btn-primary w-100'> Submit </button>
+                <button type='submit' className='btn btn-primary w-100'> Təsdiqlə </button>
             </form>
         </div>
     )

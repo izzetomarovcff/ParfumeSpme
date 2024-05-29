@@ -73,20 +73,20 @@ function ForgotPassword() {
             {sended ? (
                 <div className='loading-overlay bg-secondary'>
                     <div className='alert alert-success text-center'>
-                        E-mail sent successfully!<br></br> Check Your Email: <br></br>{email}
+                       Emailə göndərildi<br></br> Emaili yoxla : <br></br>{email}
                     </div>
-                    <p className='text-success w-50 text-center'>After a few seconds, you will be redirected to the login page</p>
+                    <p className='text-success w-50 text-center'>Bir neçə saniyə ərzində əsas səhifəyə yönləndiriləcəksiniz!</p>
                 </div>
             ) : (null)}
-            <h1 className='mt-5'>Forgot Password</h1>
-            <p className=' text-center mt-3'>Please, enter your email address. You will receive a link to create a new password via email.</p>
+            <h1 className='mt-5'>Şifrəni sıfırla</h1>
+            <p className=' text-center mt-3'>Şifrəni sıfırlamaq üçün Emaili qeyd edin.</p>
             {error ? (<p className='alert alert-warning w-100'>{error}</p>) : (null)}
             <form onSubmit={handleSubmit} className='mt-1'>
                 <div className="mb-3 w-100">
                     <label htmlFor="email" className="form-label">E-Mail</label>
-                    <input type="email" name='email' className="form-control" id="email" value={email} onChange={handleChange} autoComplete='off' placeholder='izzetomarovcff@gmail.com' required />
+                    <input type="email" name='email' className="form-control" id="email" value={email} onChange={handleChange} autoComplete='off' placeholder='parfumeSp@gmail.com' required />
                 </div>
-                <button type='submit' className='btn btn-primary w-100 mt-3'>SEND</button>
+                <button type='submit' className='btn btn-primary w-100 mt-3'>Göndər</button>
             </form>
         </div>
     )

@@ -57,10 +57,10 @@ function Cart() {
     <div className='cart'>
       
       
-      <div className='header bg-secondary'>My Bag</div>
+      <div className='header bg-secondary'>Səbətim</div>
       <div className='products'>
         {GeneralResponse.cart.length == 0 ? (
-          <div className='mx-auto mt-5'>Bag Is Empty</div>
+          <div className='mx-auto mt-5'>Səbət Boşdur</div>
         ) : (
           GeneralResponse.cart.map((product, productkey) => {
             return (
@@ -75,7 +75,7 @@ function Cart() {
                     <div className='info mt-2'>
                       <Link className='h1' to={`/shop/product/${product.id}`}>{product.productName}</Link>
                       {product.sizes == "" ? (null) : (
-                        <p className='size mt-1'><span>Size:</span><span className='text-dark ms-2'>{product.sizes}</span></p>
+                        <p className='size mt-1'><span>Ölçü:</span><span className='text-dark ms-2'>{product.sizes}</span></p>
                       )}
                     </div>
                     <div className='totrash me-3 mt-2' onClick={() => removecart(product.id)}>
@@ -107,10 +107,10 @@ function Cart() {
         )}
       </div>
       <Link to={GeneralResponse.cart.length == 0 ? ('/shop/women'):('/cart/neworder')} className="neworder btn btn-primary">
-        Order Now
+        İndi Sifariş et
       </Link>
       <div className="footer bg-white">
-        <div className='total text-dark ms-4'>Total: </div>
+        <div className='total text-dark ms-4'>Ümumi: </div>
         <div className="amount text-primary me-4">
           {oldSum == 0 ? (null) : (<del className='me-2'>${oldSum}</del>)}
 

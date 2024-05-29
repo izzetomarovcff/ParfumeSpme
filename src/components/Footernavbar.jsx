@@ -97,23 +97,23 @@ function Footernavbar() {
     <div className='footernavbar shadow-lg'>
       <div className='navitem'  onClick={()=>handleClick("home")}>
         <img src={iconpath.home} alt="" />
-        <p>Home</p>
+        <p>Əsas Səhifə</p>
       </div>
       <div className='navitem' onClick={()=>handleClick("shop")}>
         <img src={iconpath.shop} alt="" />
-        <p>Shop</p>
+        <p>Kategori</p>
       </div>
       <div className='navitem' onClick={()=>handleClick("cart")}>
         <img src={iconpath.cart} alt="" />
-        <p>Cart</p>
+        <p>Səbət</p>
       </div>
       <div className='navitem' onClick={()=>handleClick("favorites")}>
         <img src={iconpath.favorites} alt="" />
-        <p>Like</p>
+        <p>Favori</p>
       </div>
       <div className='navitem' onClick={()=>handleClick("profile")}>
         <img src={iconpath.profile} alt="" />
-        <p>Profile</p>
+        <p>Profil</p>
       </div>
       {authUser ? (authUser.email === process.env.REACT_APP_FIREBASE_ADMIN_EMAIL ?(
         <div className='navitem' onClick={()=>handleClick("admin")}>

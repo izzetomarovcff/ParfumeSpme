@@ -50,7 +50,7 @@ function Profile() {
   }
   return (
     <div className='profilepage'>
-      <div className='header bg-secondary'>My Profile</div>
+      <div className='header bg-secondary'>Profil</div>
       <div className="profilecontainer">
         {authUser ? (
           <div className='profile rounded'>
@@ -63,8 +63,8 @@ function Profile() {
         
         <Link to={"/profile/orders"} className="itembox mt-4">
           <div className="info">
-            <h2>My Orders</h2>
-            <p className='mt-1'>Alredy have {orders?(orders.length):(0)} orders</p>
+            <h2>Mənim sifarişlərim</h2>
+            <p className='mt-1'>Sifariş Sayı - {orders?(orders.length):(0)} </p>
           </div>
           <div className="to">
             <img src="/icons/chevron_right.svg" alt="" />
@@ -72,14 +72,14 @@ function Profile() {
         </Link>
         <Link to={"/profile/settings"} className="itembox mt-4">
           <div className="info">
-            <h2>Settings</h2>
-            <p className='mt-1'>Password, Log Out</p>
+            <h2>Ayarlar</h2>
+            <p className='mt-1'>Şifrə, Çıxış</p>
           </div>
           <div className="to">
             <img src="/icons/chevron_right.svg" alt="" />
           </div>
         </Link>
-        {authUser ? (<button className='btn btn-primary mt-3 mb-5' onClick={userSignOut}>Sign Out</button>) : (null)}
+        {authUser ? (<button className='btn btn-primary mt-3 mb-5' onClick={userSignOut}>Çıxış</button>) : (null)}
       </div>
       <Footernavbar />
     </div>

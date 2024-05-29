@@ -45,7 +45,7 @@ function MyOrders() {
             <div className='header bg-secondary'>
                 <div className='backicon' onClick={() => { window.history.back() }}><img src="/icons/back.svg" alt="" /></div>
 
-                My Orders
+               Mənim Sifarişlərim
                 <div className='right'></div>
             </div>
             <div className='orders'>
@@ -54,26 +54,26 @@ function MyOrders() {
                         return(
                             <div className="order my-3 shadow-sm" key={orderkey}>
                                 <div className="heading ">
-                                    <h1 className="orderidtext">Order ID : <span className='orderid'>{order.id}</span></h1>
+                                    <h1 className="orderidtext">Sifariş ID : <span className='orderid'>{order.id}</span></h1>
                                     <p className='date'>{order.date}</p>
                                 </div>
                                 <div className="quantitiyandprice mt-3">
-                                    <p>Quantity: 
+                                    <p>Miqdar: 
                                         <span className='text-dark ms-2'>
                                             {order.totalcount}
                                         </span>
                                     </p>
-                                    <p>Total Amount: 
+                                    <p>Ümumi Məbləğ: 
                                         <span className='text-dark ms-2'>
                                             {order.totalammount}₼
                                         </span>
                                     </p>
                                 </div>
                                 <div className="details mt-3">
-                                    <Link to={`/profile/orders/${order.id}`} className='btn btn-outline-dark px-4'>Details</Link>
-                                    {order.orderStatus == "delivered" ? (<div className='status text-success'>Delivered</div>):(
-                                        order.orderStatus == "processing" ? (<div className='status text-warning'>Processing</div>):(
-                                            order.orderStatus == "cancelled" ? (<div className='status text-primary'>Cancelled</div>) :(<div className='status text-info'>Not Status</div>)
+                                    <Link to={`/profile/orders/${order.id}`} className='btn btn-outline-dark px-4'>Detallar</Link>
+                                    {order.orderStatus == "delivered" ? (<div className='status text-success'>Çatdırılmış</div>):(
+                                        order.orderStatus == "processing" ? (<div className='status text-warning'>Davam edir</div>):(
+                                            order.orderStatus == "cancelled" ? (<div className='status text-primary'>Ləğv edildi</div>) :(<div className='status text-info'>Not Status</div>)
                                         )
                                     )}
                                     

@@ -41,7 +41,7 @@ function NewProducts() {
                 <Link to={`/shop/product/${product.id}`} className='productimg'>
                   <img src={product.imgUrl} alt="product" />
                   {product.isSale ? (<div className='sale bg-primary'>-{product.salePer}%</div>) : (null)}
-                  {product.isNew ? (<div className='new bg-dark'>NEW</div>) : (null)}
+                  {product.isNew ? (<div className='new bg-dark'>Yeni</div>) : (null)}
                 </Link>
                 <div className='d-flex mt-2'>
                   {Array.from({ length: product.starCount }, (_, index) => <img src="image/home/sale/star.svg" alt="" key={index} />)}

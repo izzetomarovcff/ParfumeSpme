@@ -65,7 +65,7 @@ function CollectionProduct() {
                                 <div className='productimg'>
                                     <img src={product.imgUrl} alt="product" />
                                     {product.isSale ? (<div className='sale bg-primary'>-{product.salePer}%</div>) : (null)}
-                                    {product.isNew ? (<div className='new bg-dark'>new</div>) : (null)}
+                                    {product.isNew ? (<div className='new bg-dark'>Yeni</div>) : (null)}
                                 </div>
                                 </Link>
                                 <div className='d-flex mt-2 ms-2'>

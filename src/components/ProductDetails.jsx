@@ -108,7 +108,7 @@ function ProductDetails() {
                         {Array.from({ length: 5 - product.starCount }, (_, index) => <img src="/image/home/sale/starinactive.svg" alt="" key={index} />)}
                         <p className='mb-0 fs-6'>({product.starPoint})</p>
                     </div>
-                    <p className='longtext mt-2'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam veritatis commodi ipsum ea nihil dolores, dolorem, quasi quod maxime, voluptatum alias eos ex eligendi quo. Suscipit ex rerum dolorem assumenda.</p>
+                    <p className='longtext mt-2'>Bütün ətirlərimiz çox keyfiyətli və münasib qiymətədir.</p>
                     <div className='footer bg-white shadow-lg'>
                         {GeneralResponse.cart.find(item=>item.id == product.id) ? (
                             <div className='btngroup'>
@@ -119,7 +119,7 @@ function ProductDetails() {
                             <div className='btn btnright btn-primary ' onClick={productCountPlus}>+</div>
                         </div>
                         ) : (
-                            <button className='btn btn-lg btn-primary w-75' onClick={handleAddCart}>Add To Cart</button>
+                            <button className='btn btn-lg btn-primary w-75' onClick={handleAddCart}>Səbətə Əlavə et</button>
                         )}
                         
                     </div>
