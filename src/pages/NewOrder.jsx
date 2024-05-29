@@ -139,8 +139,8 @@ function NewOrder() {
                     <input type="text" name='shippingAddress' className="form-control" id="shippingAddress" value={order.shippingAddress} onChange={handleChange} autoComplete='off' required placeholder='Baku AZ, Xatai, Polad Hashimov' />
                 </div>
                 <div className="mb-3 w-100">
-                    <label htmlFor="card16digit" className="form-label">Card Number</label>
-                    <input type="number" name='card16digit' className="form-control" id="card16digit" value={order.card16digit} onChange={handleChange} autoComplete='off' required placeholder='Telefon Nömrəsi'/>
+                    <label htmlFor="card16digit" className="form-label">Phone</label>
+                    <input type="number" name='card16digit' className="form-control" id="card16digit" value={order.card16digit} onChange={handleChange} autoComplete='off' required placeholder='0709876543' min={1000000000000000} max={9999999999999999}/>
                 </div>
                 <div className='order'>
                     <p className='text'>Order</p>
